@@ -8,10 +8,12 @@
 </head>
 <body>
     <span>Total clicks : 0</span>
-    <button id="btn"> Click me</button>
+    <button id="btn"> +</button>
+    <button id="btn1"> -</button>
     <script>
         let counter = 0;
         const button = document.getElementById("btn");
+        const button1 = document.getElementById("btn1");
         const span = document.querySelector("span");
         
         const handleClick = () => {
@@ -19,8 +21,13 @@
             span.innerText = `Total ${counter}`;
         }
         
+        const handleClick1 = () => {
+            counter -= 1;
+            span.innerText = `Total ${counter}`;
+        }
 
         button.addEventListener("click", handleClick);
+        button1.addEventListener("click", handleClick1);
 
 
 
